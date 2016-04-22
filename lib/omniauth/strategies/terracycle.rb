@@ -8,6 +8,10 @@ module OmniAuth
       option :country_code, :us
       option :base_uri, nil
 
+      def callback_url
+        'http://localhost:3333/users/auth/terracycle/callback'
+      end
+
       def initialize(*args, &block)
         super(*args, &block)
 
